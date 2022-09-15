@@ -35,6 +35,7 @@ public class ArrayGradebook {
             double grade = input.nextDouble();
             grades[i] = grade;
         }
+        input.close();
 
         // Print class roster
         System.out.println("\nClass roster:");
@@ -47,6 +48,7 @@ public class ArrayGradebook {
 
         double avg = sum / numStudents;
         System.out.println("Average grade: " + avg);
+
     }
 
 }

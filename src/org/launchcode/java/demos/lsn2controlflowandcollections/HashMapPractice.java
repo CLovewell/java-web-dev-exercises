@@ -4,11 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class HashMapGradebook {
-
+public class HashMapPractice {
     public static void main(String[] args) {
-
-        HashMap<String, Double> students = new HashMap<>();
+        HashMap<Integer, String> roster = new HashMap<>();
         Scanner input = new Scanner(System.in);
         String newStudent;
 
@@ -21,9 +19,9 @@ public class HashMapGradebook {
             newStudent = input.nextLine();
 
             if (!newStudent.equals("")) {
-                System.out.print("Grade: ");
-                Double newGrade = input.nextDouble();
-                students.put(newStudent, newGrade);
+                System.out.print("ID: ");
+                Integer newID = input.nextInt();
+                roster.put(newID, newStudent);
 
                 // Read in the newline before looping back
                 input.nextLine();
@@ -34,14 +32,9 @@ public class HashMapGradebook {
 
         // Print class roster
         System.out.println("\nClass roster:");
-        double sum = 0.0;
 
-        for (Map.Entry<String, Double> student : students.entrySet()) {
-            System.out.println(student.getKey() + " (" + student.getValue() + ")");
-            sum += student.getValue();
+        for (Map.Entry<Integer, String> student : roster.entrySet()) {
+            System.out.println(student.getValue() + " (" + student.getKey() + ")");
         }
-
-        double avg = sum / students.size();
-        System.out.println("Average grade: " + avg);
     }
 }
