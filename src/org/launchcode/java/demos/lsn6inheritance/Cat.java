@@ -12,6 +12,9 @@ public class Cat {
     public Cat (double aWeight) {
         weight = aWeight;
     }
+    public Cat () {
+        weight = 7;
+    }
 
     /**** Getters and Setters ****/
 
